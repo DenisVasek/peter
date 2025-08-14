@@ -5,361 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>peterappwslubuntu</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            margin: 0;
             padding: 20px;
+            background-color: white;
+            font-family: Arial, sans-serif;
         }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            color: white;
-        }
-
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .gallery-item {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
+        img {
+            max-width: 100%;
+            height: auto;
             display: block;
-        }
-
-        .image-info {
-            padding: 15px;
-            text-align: center;
-        }
-
-        .image-info h3 {
-            color: #333;
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-
-        .image-info p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        .stats {
-            background: rgba(255,255,255,0.9);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 30px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-        }
-
-        .stats h2 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .stats p {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        @media (max-width: 768px) {
-            .gallery {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 15px;
-                padding: 10px;
-            }
-
-            .header h1 {
-                font-size: 2rem;
-            }
-
-            body {
-                padding: 10px;
-            }
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Photo Gallery</h1>
-            <p>Beautiful moments captured in time</p>
-        </div>
-
-        <div class="stats">
-            <h2>Gallery Statistics</h2>
-            <p>Total Images: 33 | Format: WebP | Optimized for web (96% smaller than PNG)</p>
-        </div>
-
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="newphotos/75FDFDEC-F3EF-48B5-A3D6-66900EE1FB05.webp" alt="Photo 1">
-                <div class="image-info">
-                    <h3>Photo 1</h3>
-                    <p>Beautiful moment captured</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/8E8A6814-2681-46C6-B464-F731E5351343.webp" alt="Photo 2">
-                <div class="image-info">
-                    <h3>Photo 2</h3>
-                    <p>Memorable experience</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/Gergely Photo_GT7_1026.webp" alt="Photo 3">
-                <div class="image-info">
-                    <h3>Photo 3</h3>
-                    <p>Special moment</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_0174.webp" alt="Photo 4">
-                <div class="image-info">
-                    <h3>Photo 4</h3>
-                    <p>Amazing capture</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_0279.webp" alt="Photo 5">
-                <div class="image-info">
-                    <h3>Photo 5</h3>
-                    <p>Incredible shot</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_0289.webp" alt="Photo 6">
-                <div class="image-info">
-                    <h3>Photo 6</h3>
-                    <p>Perfect timing</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_0297.webp" alt="Photo 7">
-                <div class="image-info">
-                    <h3>Photo 7</h3>
-                    <p>Stunning view</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_0307.webp" alt="Photo 8">
-                <div class="image-info">
-                    <h3>Photo 8</h3>
-                    <p>Beautiful scene</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_0384.webp" alt="Photo 9">
-                <div class="image-info">
-                    <h3>Photo 9</h3>
-                    <p>Amazing perspective</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_0389.webp" alt="Photo 10">
-                <div class="image-info">
-                    <h3>Photo 10</h3>
-                    <p>Incredible detail</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_0445.webp" alt="Photo 11">
-                <div class="image-info">
-                    <h3>Photo 11</h3>
-                    <p>Perfect composition</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_0812.webp" alt="Photo 12">
-                <div class="image-info">
-                    <h3>Photo 12</h3>
-                    <p>Stunning capture</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_0881.webp" alt="Photo 13">
-                <div class="image-info">
-                    <h3>Photo 13</h3>
-                    <p>Beautiful moment</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_1301.webp" alt="Photo 14">
-                <div class="image-info">
-                    <h3>Photo 14</h3>
-                    <p>Amazing shot</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_1419.webp" alt="Photo 15">
-                <div class="image-info">
-                    <h3>Photo 15</h3>
-                    <p>Incredible view</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_1598.webp" alt="Photo 16">
-                <div class="image-info">
-                    <h3>Photo 16</h3>
-                    <p>Perfect timing</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_2106.webp" alt="Photo 17">
-                <div class="image-info">
-                    <h3>Photo 17</h3>
-                    <p>Stunning scene</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_2712.webp" alt="Photo 18">
-                <div class="image-info">
-                    <h3>Photo 18</h3>
-                    <p>Beautiful capture</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_2757.webp" alt="Photo 19">
-                <div class="image-info">
-                    <h3>Photo 19</h3>
-                    <p>Amazing detail</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_3146.webp" alt="Photo 20">
-                <div class="image-info">
-                    <h3>Photo 20</h3>
-                    <p>Perfect composition</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_3436.webp" alt="Photo 21">
-                <div class="image-info">
-                    <h3>Photo 21</h3>
-                    <p>Incredible moment</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_3480.webp" alt="Photo 22">
-                <div class="image-info">
-                    <h3>Photo 22</h3>
-                    <p>Stunning beauty</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_3552.webp" alt="Photo 23">
-                <div class="image-info">
-                    <h3>Photo 23</h3>
-                    <p>Amazing perspective</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_3702.webp" alt="Photo 24">
-                <div class="image-info">
-                    <h3>Photo 24</h3>
-                    <p>Beautiful scene</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_3752.webp" alt="Photo 25">
-                <div class="image-info">
-                    <h3>Photo 25</h3>
-                    <p>Perfect capture</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_4525.webp" alt="Photo 26">
-                <div class="image-info">
-                    <h3>Photo 26</h3>
-                    <p>Incredible shot</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_4855.webp" alt="Photo 27">
-                <div class="image-info">
-                    <h3>Photo 27</h3>
-                    <p>Stunning view</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_4870.webp" alt="Photo 28">
-                <div class="image-info">
-                    <h3>Photo 28</h3>
-                    <p>Beautiful moment</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_5389.webp" alt="Photo 29">
-                <div class="image-info">
-                    <h3>Photo 29</h3>
-                    <p>Amazing detail</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_5392.webp" alt="Photo 30">
-                <div class="image-info">
-                    <h3>Photo 30</h3>
-                    <p>Perfect timing</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_5394.webp" alt="Photo 31">
-                <div class="image-info">
-                    <h3>Photo 31</h3>
-                    <p>Stunning composition</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_5982.webp" alt="Photo 32">
-                <div class="image-info">
-                    <h3>Photo 32</h3>
-                    <p>Incredible beauty</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="newphotos/IMG_9484.webp" alt="Photo 33">
-                <div class="image-info">
-                    <h3>Photo 33</h3>
-                    <p>Perfect moment</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <img src="newphotos/75FDFDEC-F3EF-48B5-A3D6-66900EE1FB05.webp" alt="Photo 1">
+    <img src="newphotos/8E8A6814-2681-46C6-B464-F731E5351343.webp" alt="Photo 2">
+    <img src="newphotos/Gergely Photo_GT7_1026.webp" alt="Photo 3">
+    <img src="newphotos/IMG_0174.webp" alt="Photo 4">
+    <img src="newphotos/IMG_0279.webp" alt="Photo 5">
+    <img src="newphotos/IMG_0289.webp" alt="Photo 6">
+    <img src="newphotos/IMG_0297.webp" alt="Photo 7">
+    <img src="newphotos/IMG_0307.webp" alt="Photo 8">
+    <img src="newphotos/IMG_0384.webp" alt="Photo 9">
+    <img src="newphotos/IMG_0389.webp" alt="Photo 10">
+    <img src="newphotos/IMG_0445.webp" alt="Photo 11">
+    <img src="newphotos/IMG_0812.webp" alt="Photo 12">
+    <img src="newphotos/IMG_0881.webp" alt="Photo 13">
+    <img src="newphotos/IMG_1301.webp" alt="Photo 14">
+    <img src="newphotos/IMG_1419.webp" alt="Photo 15">
+    <img src="newphotos/IMG_1598.webp" alt="Photo 16">
+    <img src="newphotos/IMG_2106.webp" alt="Photo 17">
+    <img src="newphotos/IMG_2712.webp" alt="Photo 18">
+    <img src="newphotos/IMG_2757.webp" alt="Photo 19">
+    <img src="newphotos/IMG_3146.webp" alt="Photo 20">
+    <img src="newphotos/IMG_3436.webp" alt="Photo 21">
+    <img src="newphotos/IMG_3480.webp" alt="Photo 22">
+    <img src="newphotos/IMG_3552.webp" alt="Photo 23">
+    <img src="newphotos/IMG_3702.webp" alt="Photo 24">
+    <img src="newphotos/IMG_3752.webp" alt="Photo 25">
+    <img src="newphotos/IMG_4525.webp" alt="Photo 26">
+    <img src="newphotos/IMG_4855.webp" alt="Photo 27">
+    <img src="newphotos/IMG_4870.webp" alt="Photo 28">
+    <img src="newphotos/IMG_5389.webp" alt="Photo 29">
+    <img src="newphotos/IMG_5392.webp" alt="Photo 30">
+    <img src="newphotos/IMG_5394.webp" alt="Photo 31">
+    <img src="newphotos/IMG_5982.webp" alt="Photo 32">
+    <img src="newphotos/IMG_9484.webp" alt="Photo 33">
 </body>
 </html>
